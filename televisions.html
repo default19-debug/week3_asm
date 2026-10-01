@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Televisions | Appliance Energy Consumption</title>
+  <meta name="description" content="How televisions use electricity, plus an interactive appliance energy calculator.">
+  <link rel="icon" href="assets/img/PowerIcon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Appliance Energy home page">
+          <img class="brand__mark" src="assets/img/PowerIcon.png" alt="Appliance Energy logo">
+          <span class="brand__text">
+            Appliance <span>Energy</span>
+            <span class="brand__tag">Australian household guide</span>
+          </span>
+        </a>
+
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link is-active" href="televisions.html" aria-current="page">Televisions</a></li>
+          <li><a class="nav__link" href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Appliance category</span>
+        <h1>Televisions</h1>
+        <p class="lede">
+          Screen size and panel technology drive most of the difference in television energy use.
+          A larger panel lights more area, so it draws more power to reach the same brightness.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>What drives a television's power draw</h2>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#128208;</div>
+            <h3>Screen size</h3>
+            <p class="muted">
+              Power draw rises with panel area rather than with the diagonal measurement. Moving from a
+              55-inch to a 75-inch screen increases the lit area considerably, and consumption follows.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#128161;</div>
+            <h3>Panel technology</h3>
+            <p class="muted">
+              LED, OLED and QLED panels produce light differently. OLED pixels emit their own light, so
+              consumption depends heavily on how bright the on-screen content actually is.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#9881;</div>
+            <h3>Picture settings</h3>
+            <p class="muted">
+              Brightness, contrast and picture mode have a direct effect. A showroom or vivid preset can
+              draw noticeably more power than the standard or eco preset on the same television.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2>Indicative power ratings</h2>
+          <p class="muted">
+            Placeholder figures prepared for this exercise. They are representative of the ranges you
+            might expect, but they are not manufacturer-published values.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Typical power draw while switched on, by screen size and panel type.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Television</th>
+                <th scope="col">Panel type</th>
+                <th scope="col" class="num">Power (W)</th>
+                <th scope="col" class="num">Est. yearly kWh*</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">32" HD</th><td>LED</td><td class="num">40</td><td class="num">58</td></tr>
+              <tr><th scope="row">43" Full HD</th><td>LED</td><td class="num">65</td><td class="num">95</td></tr>
+              <tr><th scope="row">50" 4K</th><td>LED</td><td class="num">85</td><td class="num">124</td></tr>
+              <tr><th scope="row">55" 4K</th><td>LED</td><td class="num">100</td><td class="num">146</td></tr>
+              <tr><th scope="row">55" 4K</th><td>OLED</td><td class="num">130</td><td class="num">190</td></tr>
+              <tr><th scope="row">65" 4K</th><td>LED</td><td class="num">140</td><td class="num">204</td></tr>
+              <tr><th scope="row">65" 4K</th><td>OLED</td><td class="num">175</td><td class="num">256</td></tr>
+              <tr><th scope="row">75" 4K</th><td>LED</td><td class="num">210</td><td class="num">307</td></tr>
+              <tr><th scope="row">85" 4K</th><td>LED</td><td class="num">290</td><td class="num">423</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="small muted callout--spaced">*Assumes four hours of viewing per day across a full year.</p>
+      </div>
+    </section>
+
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section__head">
+          <h2>Appliance Energy Calculator</h2>
+          <p class="muted">
+            Choose a television from the list or enter your own wattage, then add how long it runs and
+            what you pay for electricity. Results update as you type and after you select Calculate.
+          </p>
+        </div>
+
+        <div class="calc">
+          <form class="calc__form" id="calc-form" autocomplete="off" novalidate>
+            <div class="field">
+              <label for="calc-model">
+                Appliance model
+                <span class="field__hint">Selecting a model fills in its power rating for you.</span>
+              </label>
+              <select id="calc-model" name="model">
+                <option value="custom" data-watts="">Custom / another appliance</option>
+                <optgroup label="LED televisions">
+                  <option value="led-32" data-watts="40">32" HD LED &mdash; 40 W</option>
+                  <option value="led-43" data-watts="65">43" Full HD LED &mdash; 65 W</option>
+                  <option value="led-50" data-watts="85">50" 4K LED &mdash; 85 W</option>
+                  <option value="led-55" data-watts="100">55" 4K LED &mdash; 100 W</option>
+                  <option value="led-65" data-watts="140">65" 4K LED &mdash; 140 W</option>
+                  <option value="led-75" data-watts="210">75" 4K LED &mdash; 210 W</option>
+                  <option value="led-85" data-watts="290">85" 4K LED &mdash; 290 W</option>
+                </optgroup>
+                <optgroup label="OLED televisions">
+                  <option value="oled-55" data-watts="130">55" 4K OLED &mdash; 130 W</option>
+                  <option value="oled-65" data-watts="175">65" 4K OLED &mdash; 175 W</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="calc-watts">
+                Power rating (watts)
+                <span class="field__hint">Between 1 and 10,000 W.</span>
+              </label>
+              <input type="number" id="calc-watts" name="watts" value="100" min="1" max="10000" step="1"
+                     inputmode="decimal" aria-describedby="err-watts">
+              <p class="field__error" id="err-watts" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="calc-hours">
+                Average hours of use per day
+                <span class="field__hint">Between 0 and 24 hours.</span>
+              </label>
+              <input type="number" id="calc-hours" name="hours" value="4" min="0" max="24" step="0.5"
+                     inputmode="decimal" aria-describedby="err-hours">
+              <p class="field__error" id="err-hours" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="calc-price">
+                Electricity price (cents per kWh)
+                <span class="field__hint">Check your most recent electricity bill.</span>
+              </label>
+              <input type="number" id="calc-price" name="price" value="35" min="0.1" max="200" step="0.1"
+                     inputmode="decimal" aria-describedby="err-price">
+              <p class="field__error" id="err-price" role="alert"></p>
+            </div>
+
+            <div class="calc__actions">
+              <button class="btn btn--primary" type="submit">Calculate</button>
+              <button class="btn btn--ghost" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <div class="calc__results" id="calc-results">
+            <h3>Your estimate</h3>
+
+            <p class="results__status" id="calc-status" role="status" aria-live="polite">
+              Enter your appliance details, then select Calculate.
+            </p>
+
+            <dl class="results__list" id="calc-output" hidden>
+              <div class="result-row">
+                <dt>Daily energy</dt>
+                <dd id="out-daily">&mdash;</dd>
+              </div>
+              <div class="result-row">
+                <dt>Monthly energy</dt>
+                <dd id="out-monthly">&mdash;</dd>
+              </div>
+              <div class="result-row">
+                <dt>Yearly energy</dt>
+                <dd id="out-yearly">&mdash;</dd>
+              </div>
+              <div class="result-row">
+                <dt>Monthly cost</dt>
+                <dd id="out-cost-monthly">&mdash;</dd>
+              </div>
+              <div class="result-row result-row--highlight">
+                <dt>Yearly cost</dt>
+                <dd id="out-cost-yearly">&mdash;</dd>
+              </div>
+            </dl>
+
+            <p class="results__footnote">
+              Monthly figures use an average month of 30.44 days and yearly figures use 365 days.
+              Standby power is not included.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2>Reducing television running costs</h2>
+        </div>
+
+        <div class="callout">
+          <ul class="tick-list">
+            <li>Switch the picture preset from vivid to standard or eco, which usually costs little in perceived quality.</li>
+            <li>Turn on the ambient light sensor so the panel dims automatically in a darker room.</li>
+            <li>Set a sleep timer if the television is often left running in an empty room.</li>
+            <li>Use a switched power board to cut standby draw from the television and connected devices together.</li>
+            <li>Compare the kilowatt-hour figure on the energy rating label when buying, not just the star count.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <img src="assets/img/PowerIcon.png" alt="">
+        <strong>Appliance Energy Consumption</strong>
+      </div>
+
+      <p>&copy; <span id="year">2026</span> Tri Tran. All rights reserved.</p>
+      <p class="site-footer__meta">COS30049 Computing Technology Innovation Project &mdash; Week 3 assignment.</p>
+
+      <p class="site-footer__ack">
+        <strong>Generative AI acknowledgement:</strong> Generative AI (Claude, by Anthropic) was used to
+        assist with drafting and reviewing the HTML, CSS and JavaScript for this website. All generated
+        code was reviewed, tested and modified by the author, who takes responsibility for the final
+        submission.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Appliance Energy Consumption</title>
+  <meta name="description" content="About the Appliance Energy Consumption website, how it was built and who built it.">
+  <link rel="icon" href="assets/img/PowerIcon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Appliance Energy home page">
+          <img class="brand__mark" src="assets/img/PowerIcon.png" alt="Appliance Energy logo">
+          <span class="brand__text">
+            Appliance <span>Energy</span>
+            <span class="brand__tag">Australian household guide</span>
+          </span>
+        </a>
+
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="televisions.html">Televisions</a></li>
+          <li><a class="nav__link is-active" href="about.html" aria-current="page">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">About</span>
+        <h1>About Us</h1>
+        <p class="lede">
+          This site was built as a Week 3 assignment for COS30049 Computing Technology Innovation
+          Project, demonstrating HTML structure, external CSS styling, vanilla JavaScript interactivity
+          and version control with a GitHub repository.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#127919;</div>
+            <h3>Our purpose</h3>
+            <p class="muted">
+              To make appliance energy use easier to interpret by converting power ratings into the
+              kilowatt-hours and dollar figures that actually appear on a household electricity bill.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#128100;</div>
+            <h3>Who built it</h3>
+            <p class="muted">
+              Designed and developed by <strong>Tri Tran</strong>, a Computer Science student at
+              Swinburne University of Technology, as an individual assignment submission.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">&#128736;</div>
+            <h3>How it was built</h3>
+            <p class="muted">
+              Hand-written HTML, a single external CSS stylesheet and vanilla JavaScript. No frameworks,
+              build tools or third-party libraries are used anywhere on the site.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2>What this site demonstrates</h2>
+        </div>
+
+        <div class="callout">
+          <ul class="tick-list">
+            <li><strong>Semantic HTML</strong> across three linked pages with a shared header and footer.</li>
+            <li><strong>External CSS</strong> in a single stylesheet, with a palette sampled directly from the site logo.</li>
+            <li><strong>Responsive layout</strong> built with CSS Grid and Flexbox, tested down to small phone widths.</li>
+            <li><strong>Navigation states</strong> including a hover effect, an active-page indicator and a logo that links home.</li>
+            <li><strong>JavaScript interactivity</strong> in the FAQ accordion and the appliance energy calculator.</li>
+            <li><strong>Input validation</strong> with clear, user-friendly messages shown beside each field.</li>
+            <li><strong>Accessibility</strong> through ARIA attributes, keyboard focus styles and a skip link.</li>
+            <li><strong>Version control</strong> with the project tracked in a public GitHub repository.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Project structure</h2>
+          <p class="muted">Files are organised so that markup, styling, behaviour and images stay separate.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Repository layout.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Path</th>
+                <th scope="col">Contents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">index.html</th><td>Home page, including the FAQ accordion.</td></tr>
+              <tr><th scope="row">televisions.html</th><td>Television content and the energy calculator.</td></tr>
+              <tr><th scope="row">about.html</th><td>This page.</td></tr>
+              <tr><th scope="row">assets/css/styles.css</th><td>All styling for every page.</td></tr>
+              <tr><th scope="row">assets/js/main.js</th><td>Footer year and FAQ accordion behaviour.</td></tr>
+              <tr><th scope="row">assets/js/calculator.js</th><td>Energy calculator logic and validation.</td></tr>
+              <tr><th scope="row">assets/img/PowerIcon.png</th><td>Site logo and favicon.</td></tr>
+              <tr><th scope="row">README.md</th><td>Project documentation.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2>Generative AI acknowledgement</h2>
+        </div>
+
+        <div class="callout">
+          <p>
+            Generative AI was used during the development of this website. Specifically,
+            <strong>Claude (Anthropic)</strong> was used to assist with drafting the HTML structure,
+            writing the CSS stylesheet, implementing the FAQ accordion and the energy calculator, and
+            reviewing the code for accessibility and validation issues.
+          </p>
+          <p>
+            All AI-generated output was read, tested in a browser and adjusted by the author before
+            inclusion. The placeholder content, the colour palette decisions and the final structure of
+            the site were reviewed and approved by the author, who takes full responsibility for the
+            submitted work.
+          </p>
+        </div>
+
+        <div class="callout callout--spaced">
+          <p>
+            <strong>Source code:</strong>
+            <a href="https://github.com/default19-debug/week3_asm">github.com/default19-debug/week3_asm</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <img src="assets/img/PowerIcon.png" alt="">
+        <strong>Appliance Energy Consumption</strong>
+      </div>
+
+      <p>&copy; <span id="year">2026</span> Tri Tran. All rights reserved.</p>
+      <p class="site-footer__meta">COS30049 Computing Technology Innovation Project &mdash; Week 3 assignment.</p>
+
+      <p class="site-footer__ack">
+        <strong>Generative AI acknowledgement:</strong> Generative AI (Claude, by Anthropic) was used to
+        assist with drafting and reviewing the HTML, CSS and JavaScript for this website. All generated
+        code was reviewed, tested and modified by the author, who takes responsibility for the final
+        submission.
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
